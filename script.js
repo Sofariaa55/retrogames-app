@@ -29,6 +29,7 @@ formulario.addEventListener("submit", (event) => {
     const img = document.createElement("img");
     img.src = imagem;
     img.alt = "Capa do jogo " + titulo;
+
     img.onerror = () => {
         img.alt = "Imagem da capa indisponível";
         img.removeAttribute("src");
@@ -48,6 +49,7 @@ formulario.addEventListener("submit", (event) => {
 
     const precoTexto = document.createElement("p");
     precoTexto.classList.add("preco");
+
     precoTexto.textContent = preco.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
