@@ -1,4 +1,3 @@
-
 const API_URL = "http://localhost:3000"
 
 const btnCadastrar = document.getElementById("abrirModal")
@@ -18,7 +17,7 @@ btnCancelar.addEventListener("click", ()=> {
 
 async function carregarJogos() {
     try {
-        const resposta = await fetch(API_URL + "/listar")
+        const resposta = await fetch(API_URL + '/listar')
         const jogos = await resposta.json()
 
         lista.innerHTML = ""
@@ -57,7 +56,7 @@ form.addEventListener("submit", async (evento) => {
     }
 
     try {
-        const resposta = await fetch(API_URL + "/cadastrar", {
+        const resposta = await fetch(API_URL + '/cadastrar', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
